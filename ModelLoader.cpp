@@ -78,6 +78,7 @@ namespace ModelLoader
 		if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
 		{
 			std::cout << "Assimp Error: " << importer.GetErrorString() << std::endl;
+			return;
 		}
 		dir = path.substr(0, path.find_last_of('/'));
 		processNode(scene->mRootNode, scene);

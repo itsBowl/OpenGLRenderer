@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 
     Render::init();
     auto result = Render::testPopulate();
-    if (!result) std::cout << "ERROR CODE: " << result << "\n";
+    if (result) std::cout << "ERROR CODE: " << result << "\n";
 
     int wWidth = 0, wHeight = 0;
     
